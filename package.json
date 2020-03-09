@@ -1,0 +1,31 @@
+{
+  "name": "follow-track",
+  "version": "1.0.0",
+  "description": "A follower tracker for github",
+  "main": "backend.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "python-shell": "^1.0.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeremyt123/follow-track.git"
+  },
+  "keywords": [
+    "follower",
+    "tracker",
+    "github",
+    "followers"
+  ],
+  "author": "jeremy thorne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeremyt123/follow-track/issues"
+  },
+  "homepage": "https://github.com/jeremyt123/follow-track#readme"
+}
