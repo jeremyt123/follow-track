@@ -28,24 +28,24 @@ def getFollowers(username):
 
   #  loops through and finds all followers
   for a in soup.findAll('span', attrs={'class': 'link-gray pl-1'}):
-      followers.append(a.text)
+    followers.append(a.text)
 
   # getting the following data
   soup = BeautifulSoup(followingHTML, "html.parser")
 
   #  loops through and finds all following
   for a in soup.findAll('span', attrs={'class': 'link-gray pl-1'}):
-      following.append(a.text)
+    following.append(a.text)
 
   followsBack = 0
   # checks who doesnt follow you
   for person in following:
-      for person2 in followers:
-          if person2 == person:
-              followsBack = 1
-      if followsBack == 0:
-          fakeFans.append(person)
-      followsBack = 0
+    for person2 in followers:
+      if person2 == person:
+        followsBack = 1
+    if followsBack == 0:
+      fakeFans.append(person)
+    followsBack = 0
 
   for person in fakeFans:
       print(person)

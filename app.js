@@ -17,7 +17,6 @@ app.get('/',function(req,res){
 
 app.get('/track', function(req, res) {
   username = req.query.user;
-  let pyshell = new PythonShell('scrape.py');
   let options = {
     pythonOptions: ['-u'],
     args: [username]
@@ -25,17 +24,11 @@ app.get('/track', function(req, res) {
 
   PythonShell.run('scrape.py', options, function (err, results) {
     if (err) throw err;
-
-    app.get('/sendList', function(req, res) {
-      let followers = results;
-      console.log(followers);
-      res.send({
-        followers: followers
-      })
-    })
+    let followers = results;
+    res.send({
+      followers: followers
+    });
   });
-
-
 });
 
 app.listen(8080);
