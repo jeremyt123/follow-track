@@ -2,6 +2,7 @@ jQuery(document).ready(function($) {
 
   $('#runScript').click(function() {  
     username = $('#username').val();
+    $('#runScript').html('Loading');
     //sends username and receives list of users
     $.ajax({
       type: 'get',
@@ -27,4 +28,5 @@ function displayFollowers(followers) {
       )
     );
   }
+  $('#runScript').html('Search');
 }
